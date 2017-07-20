@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url("../img/back.png");
+    background-size: cover;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 60px;
+    background-color: #2A2A2A;
+    opacity: 0.6;
+}
+.topimg1{
+    width: 150px;
+    height: 60px;
+}
+.topimg2{
+    width: 100px;
+    height: 60px;
+}
+.main{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%,0);
+}
+.bookDiv{
+    margin: 0 auto;
+    position: relative;
+}
+.book{
+    width: 100%;
+    height: 100%;
+    max-width: 450px;
+    max-height: 427px;
+    min-height: 335px;
+    min-width:350px ;
+}
+.create{
+    width: 45%;
+    height: 20%;
+    position: absolute;
+    bottom: 4%;
+    right: 17%;
+    cursor: pointer;
+}
