@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+}
+body{
+    background-image: url("../img/background.png");
+    background-size: 100% 100%;
+
+}
+.topimg1{
+    width: 150px;
+    height: 60px;
+}
+.top{
+    display: flex;
+    justify-content: flex-start;
+
+    padding-left: 20px;
+    height: 60px;
+    background-color: #2A2A2A;
+    opacity: 0.7;
+
+}
+.window{
+    height: 350px;
+    width:250px;
+    position: absolute;
+    right: 20px;
+}
+.plant{
+    height: 100px;
+    width:50px;
+    position: absolute;
+    top:200px;
+    right:180px;
+    z-index: 1;
+}
+.water{
+    height: 50px;
+    width:50px;
+    position: absolute;
+    left: 80px;
+    top:281px;
+}
+.besideTable{
+    height: 150px;
+    width:150px;
+    position: absolute;
+    top:310px;
+    left: 30px;
+}
+.carpet{
+    position: absolute;
+    width: 550px;
+    height: 150px;
+    top: 400px;
+    left:100px;
+}
+.bed{
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    top: 230px;
+    left:176px;
+}
+.lamp{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0px;
+    left:270px;
+}
+.charge{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 303px;
+    left:440px;
+}
+.topitem{
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: -20px;
+    left:310px;
+}
+.book{
+    width: 110px;
+    height: 75px;
+    position: absolute;
+    top: 11px;
+    left:352px;
+}
+.mirror{
+    width: 150px;
+    height: 325px;
+    position: absolute;
+    top: 130px;
+    left:540px;
+}
+.content{
+
+    position: relative;
+}
+
+
+#canvas{
+    position: absolute;
+    top:20px;
+    left: 20px;
+    transform: scale(0.8,0.8);
+}

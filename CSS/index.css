@@ -55,18 +55,18 @@ body{
 #record{
     position: absolute;
     top: 20px;
-    left: 200px;
+    right: -80px;
 
 }
 #work{
     position: absolute;
     top: 200px;
-    left: -100px;
+    left: -200px;
 
 }
 #study{
     position: absolute;
-    top: -20px;
+    bottom: 80px;
     right: -100px;
 
 }
