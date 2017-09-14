@@ -4,6 +4,7 @@
 }
 html,body{
     height: 100%;
+    min-height: 645px;
 }
 body{
     background-image: url("../img/background.png");
@@ -17,11 +18,12 @@ body{
 .top{
     display: flex;
     justify-content: flex-start;
-
     padding-left: 20px;
-    height: 60px;
+    min-height: 60px;
+    height: 5%;
     background-color: #2A2A2A;
     opacity: 0.7;
+
 
 }
 .window{
@@ -70,7 +72,7 @@ body{
     width: 150px;
     height: 150px;
     position: absolute;
-    top: 0px;
+    top: -10px;
     left:270px;
 }
 .charge{
@@ -84,26 +86,28 @@ body{
     width: 300px;
     height: 150px;
     position: absolute;
-    top: -20px;
-    left:310px;
+    top: -25px;
+    left:313px;
 }
 .book{
     width: 110px;
     height: 75px;
     position: absolute;
-    top: 11px;
-    left:352px;
+    top: 6px;
+    left:350px;
 }
 .mirror{
     width: 150px;
     height: 325px;
     position: absolute;
-    top: 130px;
-    left:540px;
+    top: 145px;
+    left:600px;
 }
 .content{
 
     position: relative;
+    width: 1018px;
+    margin: 0 auto;
 }
 
 
