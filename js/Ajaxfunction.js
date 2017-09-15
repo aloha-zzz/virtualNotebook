@@ -1,3 +1,4 @@
+console.log(API);
 function AjaxFunction() {
     function ajaxFunction() {
         

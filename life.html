@@ -5,6 +5,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/life.css">
     <link rel="stylesheet" href="css/common.css">
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/API.js"></script>
+    <script src="js/Ajaxfunction.js"></script>
 </head>
 <body>
     <div class="top">
@@ -13,24 +16,25 @@
     </div>
 
     <div class="content">
-        <img class="plant" src="img/life/plant.png">
-        <img class="window" src="img/life/window.png">
+        <img class="plant touch" src="img/life/plant.png">
+        <img class="window touch" src="img/life/window.png">
         <img class="besideTable" src="img/life/besideTable.png">
-        <img class="water" src="img/life/water.png">
+        <img class="water touch" src="img/life/water.png">
         <img class="carpet" src="img/life/carpet.png">
-        <img class="bed" src="img/life/bed.png">
+        <img class="bed touch" src="img/life/bed.png">
         <img class="lamp" src="img/life/lamp.png">
-        <img class="charge" src="img/life/charge.png">
+        <img class="charge touch" src="img/life/charge.png">
         <img class="topitem" src="img/life/topitem.png">
-        <img class="book" src="img/life/book.png">
-        <img class="mirror" src="img/life/mirror.png">
+        <img class="book touch" src="img/life/book.png">
+        <img class="mirror touch" src="img/life/mirror.png">
         <canvas id="canvas"></canvas>
     </div>
-    <div class="addTask">
+    <div class="addTask" id="addTask">
+
         <div>写下您将要添加的事项</div>
         <div>
             <div>事项名称:</div>
-            <div><input type="text"></div>
+            <div><input  type="text"></div>
         </div>
         <div>
             <div>事项时间:</div>
@@ -42,6 +46,7 @@
         <div>
           <button id="submit">提交</button>
         </div>
+        <div id="close">&times;</div>
     </div>
     <div class="getTask">
 
@@ -73,6 +78,7 @@
                 <div class="time">2017/07/14 15:00</div>
             </div>
         </div>
+
         <div>
             <div>现有事项:6</div>
             <button id="add">添加</button>
@@ -84,6 +90,6 @@
     <img class="right" src="img/work/right.png">
     <script src="js/life.js"></script>
     <script src="js/clock.js"></script>
-
+    <script src="js/common.js"></script>
 </body>
 </html>

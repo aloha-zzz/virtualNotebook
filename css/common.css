@@ -17,9 +17,10 @@
     cursor: pointer;
 }
 .addTask{
-    position: relative;
-    left: 150px;
-    top:250px;
+    position:absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
     width:400px;
     /*border: 1px solid red;*/
     background-color: #fff;
@@ -70,6 +71,14 @@
     outline: 5px auto #88ADBA;
     outline-offset: -2px;
 }
+#close{
+    position: absolute;
+    top: 6px;
+    right:8px;
+    font-size:24px;
+    color: #111111;
+    cursor: pointer;
+}
 /*gettask*/
 .getTask{
     padding-left: 20px;
@@ -79,7 +88,7 @@
     top:250px;
     background-color: #fff;
     border-radius: 5px;
-    border:1px solid red;
+
     width:300px;
 }
 .getTask>div:first-child{
