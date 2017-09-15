@@ -1,13 +1,3 @@
-function s(id){
-    return document.getElementById(id);
-}
-
-s('add').onclick=function () {
-    s('addTask').style.display="block";
-}
-s('close').onclick=function () {
-    s('addTask').style.display="none";
-}
 
 
 s('submit').onclick=function () {
@@ -26,3 +16,4 @@ s('submit').onclick=function () {
     }
 
 }
+

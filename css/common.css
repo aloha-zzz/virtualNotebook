@@ -25,9 +25,9 @@
     /*border: 1px solid red;*/
     background-color: #fff;
 
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 2;
-    display: none;
+    /*display: none;*/
 }
 .addTask>div{
     display: flex;
@@ -71,7 +71,7 @@
     outline: 5px auto #88ADBA;
     outline-offset: -2px;
 }
-#close{
+#closeAddTask,#closeDeleteDiv{
     position: absolute;
     top: 6px;
     right:8px;
@@ -88,8 +88,8 @@
     top:250px;
     background-color: #fff;
     border-radius: 5px;
-
     width:300px;
+    /*display:none;*/
 }
 .getTask>div:first-child{
     color:#ec6941;
@@ -119,7 +119,6 @@
 }
 .taskLine>div:nth-child(1){
     flex:1;
-
 }
 .taskLine>div:nth-child(2){
     flex:5;
@@ -129,8 +128,24 @@
     height: 60px;
     justify-content: center;
     font-size: 18px;
+}
+.taskLine>div:nth-child(3){
+    flex:1;
+    padding-right: 10px;
+    height: 60px;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.taskLine>div>img{
+    width: 40px;
+    height: 40px;
+
 
 }
+
 .time{
     font-size:14px;
     color:red;
@@ -160,4 +175,81 @@
     outline: thin dotted;
     outline: 5px auto #ec6941;
     outline-offset: -2px;
+}
+
+.deleteDiv{
+    position:absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+
+    background-color: #fff;
+    width: 300px;
+    height: 150px;
+    /*display: none;*/
+    border-radius: 10px;
+}
+.deleteDiv>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deleteDiv>div:first-child{
+
+    height: 60px;
+
+    font-size:18px;
+    font-weight: bold;
+
+}
+.deleteDiv>div:nth-child(2){
+margin-top: -10px;
+    height: 40px;
+    font-size: 16px;
+    font-size:16px;
+    font-weight: 500;
+}
+.deleteDiv>div:nth-child(3){
+
+    height: 30px;
+    font-size: 16px;
+    font-size:16px;
+    font-weight: 500;
+}
+.deleteDiv>div>img{
+    height: 50px;
+    width: 50px;
+}
+#delete{
+    margin-top: 10px;
+    height: 30px;
+     width: 120px;
+     background-color:#88ADBA;
+     outline: mediumaquamarine;
+     border: 1px solid #88ADBA;
+     border-radius: 4px;
+     color:#fff;
+     cursor: pointer;
+ }
+#delete:active{
+    outline: thin dotted;
+    outline: 5px auto #88ADBA;
+    outline-offset: -2px;
+}
+.tools{
+    background-color: #fff;
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90px;
+
+}
+.tools>div:first-child{
+    border-right: 1px solid gray;
+}
+.tools>div>img{
+    width: 40px;
+    height: 40px;
 }

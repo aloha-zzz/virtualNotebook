@@ -5,9 +5,8 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/life.css">
     <link rel="stylesheet" href="css/common.css">
-    <script src="js/jquery-3.2.0.min.js"></script>
-    <script src="js/API.js"></script>
-    <script src="js/Ajaxfunction.js"></script>
+
+
 </head>
 <body>
     <div class="top">
@@ -46,11 +45,14 @@
         <div>
           <button id="submit">提交</button>
         </div>
-        <div id="close">&times;</div>
+        <div id="closeAddTask">&times;</div>
     </div>
     <div class="getTask">
 
-        <div>提醒事项</div>
+        <div>
+            <img style="flex: 1" width="40" height="40" src="img/remind.png">
+            <div style="flex: 6">提醒事项</div>
+        </div>
         <div class="taskLine">
             <div>
                 <div class="circle"></div>
@@ -58,6 +60,9 @@
             <div>
                 <div>运动会开幕式致辞</div>
                 <div class="time">2017/07/14 15:00</div>
+            </div>
+            <div>
+                <img class="manage" src='img/manage.png'>
             </div>
         </div>
         <div class="taskLine">
@@ -68,6 +73,9 @@
                 <div>运动会开幕式致辞</div>
                 <div class="time">2017/07/14 15:00</div>
             </div>
+            <div>
+                <img class="manage" src='img/manage.png'>
+            </div>
         </div>
         <div class="taskLine">
             <div>
@@ -76,6 +84,9 @@
             <div>
                 <div>运动会开幕式致辞</div>
                 <div class="time">2017/07/14 15:00</div>
+            </div>
+            <div>
+                <img class="manage" src='img/manage.png'>
             </div>
         </div>
 
@@ -85,11 +96,41 @@
         </div>
 
     </div>
+    <div class="deleteDiv" id="deleteDiv">
+        <div>
+            <img src="img/prompt.png">
+            <div>提示</div>
+        </div>
+        <div>
+            是否确认删除该事项?
+        </div>
+        <div>
+            <button id="delete">删除</button>
+        </div>
 
+        <div id="closeDeleteDiv">&times;</div>
+    </div>
+    <div class='tools' id="tools">
+        <div>
+            <img src="img/edit.png">
+            编辑
+        </div>
+        <div>
+
+            <img src="img/delete.png">
+            删除
+        </div>
+    </div>
     <img class="left" src="img/work/left.png">
     <img class="right" src="img/work/right.png">
+
+</body>
+    <script src="js/jquery-3.2.0.min.js"></script>
+    <script src="js/API.js"></script>
+    <script src="js/Ajaxfunction.js"></script>
+    <script src="js/interactivity.js"></script>
     <script src="js/life.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/common.js"></script>
-</body>
+
 </html>
