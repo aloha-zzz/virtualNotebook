@@ -20,6 +20,9 @@ s('selected').onclick=function (e) {
 s('tools').onclick=function (e) {
     (e||window.e).cancelBubble=true;
 }
+s('closeEditTask').onclick=function () {
+    s('editTask').style.display='none';
+}
 var a='';//让manage　src清空;
 document.getElementsByTagName('body')[0].onclick=function (e) {
     a.src='img/manage.png'
@@ -49,7 +52,11 @@ for(var i=0;i<touch.length;i++){
             var user=new AjaxFunction();
             var page=1;
             var row=3;
-            user.getTask()
+            user.getTask(page,row,function (data) {
+                console.log(data);
+            },function (data) {
+                console.log(data);
+            })
 
             for(var i=0;i<manage.length;i++){
                 (function (g) {

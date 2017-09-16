@@ -9,6 +9,7 @@
 
 </head>
 <body>
+    <div id="outer"></div>
     <div class="top">
         <div><img class="topimg1" src="img/notebook.png"></div>
 
@@ -28,6 +29,7 @@
         <img class="mirror touch" src="img/life/mirror.png">
         <canvas id="canvas"></canvas>
     </div>
+
     <div class="addTask" id="addTask">
 
         <div>写下您将要添加的事项</div>
@@ -47,6 +49,27 @@
         </div>
         <div id="closeAddTask">&times;</div>
     </div>
+
+    <div class="editTask" id="editTask">
+
+        <div>编辑您要修改的事项</div>
+        <div>
+            <div>事项名称:</div>
+            <div><input  type="text"></div>
+        </div>
+        <div>
+            <div>事项时间:</div>
+            <div>
+                <input type="datetime-local"/>
+            </div>
+
+        </div>
+        <div>
+            <button id="edit">提交</button>
+        </div>
+        <div id="closeEditTask">&times;</div>
+    </div>
+
     <div class="getTask" id="getTask">
 
         <div>
@@ -96,6 +119,7 @@
         </div>
 
     </div>
+
     <div class="deleteDiv" id="deleteDiv">
         <div>
             <img src="img/prompt.png">

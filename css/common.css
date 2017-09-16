@@ -16,7 +16,7 @@
     right: 20px;
     cursor: pointer;
 }
-.addTask{
+.addTask,.editTask{
     position:absolute;
     left: 50%;
     top:50%;
@@ -29,19 +29,19 @@
     z-index: 2;
 
 }
-.addTask>div{
+.addTask>div,.editTask>div{
     display: flex;
     justify-content: center;
     align-items:center;
     font-weight: bold;
 }
-.addTask>div:first-child{
+.addTask>div:first-child,.editTask>div:first-child{
     padding-top: 20px;
     height: 50px;
     font-size: 20px;
 
 }
-.addTask>div>div>input{
+.addTask>div>div>input,.editTask>div>div>input{
     width: 200px;
     height:25px;
     text-indent: 10px;
@@ -50,11 +50,11 @@
     outline: mediumaquamarine;
     margin-left: 10px;
 }
-.addTask>div:nth-child(2){
+.addTask>div:nth-child(2),.editTask>div:nth-child(2){
     height: 50px;
     margin-bottom: 10px;
 }
-#submit{
+#submit,#edit{
     margin-top: 30px;
     margin-bottom: 35px;
     height: 30px;
@@ -66,12 +66,12 @@
     color:#fff;
     cursor: pointer;
 }
-#submit:active{
+#submit:active,#edit:active{
     outline: thin dotted;
     outline: 5px auto #88ADBA;
     outline-offset: -2px;
 }
-#closeAddTask,#closeDeleteDiv{
+#closeAddTask,#closeDeleteDiv,#closeEditTask{
     position: absolute;
     top: 6px;
     right:8px;
@@ -298,6 +298,7 @@ margin-top: -10px;
 }
 .deleteDiv{
     display: none;
+    z-index: 10;
 }
 .selected{
     display: none;
@@ -309,6 +310,19 @@ margin-top: -10px;
 .plant{
     z-index: 2;
 }
+.editTask{
+    display: none;
+}
 body{
+    position: relative;
     z-index: -1;
+}
+#outer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0.7;
+    z-index: 11;
+
 }
