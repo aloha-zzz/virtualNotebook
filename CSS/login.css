@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: #c3cedb;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.main{
+    width: 25%;
+    margin: 0 auto;
+}
+.main>.my_notebook{
+    margin: 0 auto;
+    width: 80%;
+    height: 200px;
+}
+.main>.my_notebook img{
+    width: 100%;
+    height: 100%;
+}
+
+.main>.login_register{
+    margin-top: 40px;
+    width: 50%;
+    height: 40px;
+    margin: 0 auto;
+    color: #e1a2a2;
+    font-weight: bold;
+}
+.main>.login_register>.register{
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    float: left;
+    border-bottom: 2px solid #e1a2a2;
+}
+.main>.login_register>.login{
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    float: right;
+    border-bottom: 2px solid #e1a2a2;
+}
+
+.main>.input_area{
+    margin-top: 40px;
+    width: 100%;
+    height: 150px;
+   
+}
+.main>.input_area input{
+    padding-left: 5%;
+    height: 50px;
+    width: 95%;
+    line-height: 50px;
+    border: 1px solid #e1a2a2;;
+    outline: none;
+    background-color: white;
+}
+.main>.input_area input::-moz-placeholder{
+    color: #e1a2a2;
+}
+.main>.input_area input::-webkit-input-placeholder{
+    color: #e1a2a2;
+}
+.main>.input_area>.password{
+    border-top: 0px;
+    border-bottom: 0px;
+}
+
+
+.main>.button_area{
+    margin-top: 40px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #e1a2a2;
+    color: white;
+}
