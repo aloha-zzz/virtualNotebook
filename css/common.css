@@ -245,11 +245,12 @@ margin-top: -10px;
     align-items: center;
     width: 100px;
     position: absolute;
-    top: 377px;
-    /*//373+60*!*/
-    left: 480px;
+    /*top: 377px;*/
+
+    /*left: 480px;*/
     display: none;
     border-radius: 5px;
+    z-index: 5;
 }
 .tools:before{
     content: "";
@@ -303,4 +304,11 @@ margin-top: -10px;
 }
 .touch{
     cursor: pointer;
+    z-index: 1;
+}
+.plant{
+    z-index: 2;
+}
+body{
+    z-index: -1;
 }
