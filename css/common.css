@@ -312,6 +312,7 @@ margin-top: -10px;
 }
 .editTask{
     display: none;
+    z-index: 15;
 }
 body{
     position: relative;
@@ -323,6 +324,6 @@ body{
     height: 100%;
     background-color: transparent;
     opacity: 0.7;
-    z-index: 11;
-
+    z-index: 12;
+    display: none;
 }

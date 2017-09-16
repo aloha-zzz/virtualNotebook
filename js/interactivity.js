@@ -23,6 +23,23 @@ s('tools').onclick=function (e) {
 s('closeEditTask').onclick=function () {
     s('editTask').style.display='none';
 }
+
+var taskName='';
+var taskTime='';
+s('editBtn').onclick=function () {
+    s('editTask').style.display='block';
+    document.querySelectorAll('.editTask input')[0].value=taskName;
+    var inputValue=taskTime.replace(/\//g,'-');
+    document.querySelectorAll('.editTask input')[1].value=inputValue.replace(' ','T');
+    s('edit').onclick=function () {
+        if(document.querySelectorAll('.editTask input')[0].value==taskName&&document.querySelectorAll('.editTask input')[1].value==inputValue.replace(' ','T')){
+            alert('您还没修改信息呢');
+        }else {
+            alert('ajax');
+        }
+    }
+}
+
 var a='';//让manage　src清空;
 document.getElementsByTagName('body')[0].onclick=function (e) {
     a.src='img/manage.png'
@@ -63,7 +80,10 @@ for(var i=0;i<touch.length;i++){
                     manage[g].onclick=function () {
 
                         console.log(g)
-                        console.log(manage[g].parentNode)
+
+                        taskName=manage[g].parentNode.parentNode.children[1].children[0].innerText;
+                        taskTime=manage[g].parentNode.parentNode.children[1].children[1].innerText;
+                        console.log(taskName+'  '+taskTime);
                         a=manage[g];
                         manage[g].src="img/manage_fill.png";
                         manage[(g+1)%3].src="img/manage.png";
