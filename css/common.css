@@ -27,7 +27,7 @@
 
     border-radius: 10px;
     z-index: 2;
-    /*display: none;*/
+
 }
 .addTask>div{
     display: flex;
@@ -83,13 +83,14 @@
 .getTask{
     padding-left: 20px;
     padding-top: 10px;
-    position: relative;
+    position: absolute;
     left: 150px;
     top:250px;
     background-color: #fff;
     border-radius: 5px;
     width:300px;
-    /*display:none;*/
+    z-index: 3;
+   
 }
 .getTask>div:first-child{
     color:#ec6941;
@@ -187,7 +188,7 @@
     background-color: #fff;
     width: 300px;
     height: 150px;
-    /*display: none;*/
+
     border-radius: 10px;
 }
 .deleteDiv>div{
@@ -239,17 +240,67 @@ margin-top: -10px;
 }
 .tools{
     background-color: #fff;
-    border: 1px solid red;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 90px;
+    width: 100px;
+    position: absolute;
+    top: 377px;
+    /*//373+60*!*/
+    left: 480px;
+    display: none;
+    border-radius: 5px;
+}
+.tools:before{
+    content: "";
+    position: absolute;
+    left: -14px;
+    top:18px;
+    width:0;
+    height: 0;
 
+    border-right: 15px solid #ffffff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
+.tools>div{
+    width: 49px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
 .tools>div:first-child{
+
     border-right: 1px solid gray;
 }
 .tools>div>img{
     width: 40px;
     height: 40px;
+    cursor: pointer;
+}
+.tools>div>div{
+   color: #ec6941;
+}
+.selected{
+    position: absolute;
+    z-index: 3;
+    height:90px;
+
+}
+.addTask{
+    display: none;
+    z-index: 5;
+}
+.getTask{
+    display: none;
+}
+.deleteDiv{
+    display: none;
+}
+.selected{
+    display: none;
+}
+.touch{
+    cursor: pointer;
 }
