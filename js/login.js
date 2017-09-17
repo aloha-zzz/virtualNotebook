@@ -20,3 +20,21 @@ document.getElementById('register').onclick=function () {
     }
 
 }
+document.getElementById('login').onclick=function () {
+    var username;
+    var password;
+    if(username==''||password==""){
+        alert('用户名或密码不能为空');
+    }else{
+        var user=new AjaxFunction();
+        user.login(username,password,function (data) {
+            if(data.status==300){
+                alert('用户名或密码错误');
+            }else if(data.status==200){
+                alert('登陆成功');
+            }
+        },function (data) {
+            alert('网络连接超时')
+        })
+    }
+}
