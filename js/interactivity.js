@@ -162,11 +162,12 @@ s('closeDeleteDiv').onclick=function () {
     s('outer').style.display='none';
     s('deleteDiv').style.display='none';
 }
-//退出登录
+// 退出登录
 // s('unlogin').onclick=function () {
 //     var user=new AjaxFunction();
 //     user.unlogin(function (data) {
 //         alert('注销账号成功');
+//         $.removeCookie('username')
 //     },function (data) {
 //         alert('网络连接失败');
 //     })
