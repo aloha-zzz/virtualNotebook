@@ -47,17 +47,15 @@ html,body{
 .main>.input_area{
     margin-top: 40px;
     width: 100%;
-    height: 150px;
-   
 }
 .main>.input_area input{
     padding-left: 5%;
     height: 50px;
     width: 95%;
     line-height: 50px;
-    border: 1px solid #e1a2a2;;
-    outline: none;
     background-color: white;
+    border: 1px solid #e1a2a2;
+    outline: none;
 }
 .main>.input_area input::-moz-placeholder{
     color: #e1a2a2;
@@ -65,9 +63,13 @@ html,body{
 .main>.input_area input::-webkit-input-placeholder{
     color: #e1a2a2;
 }
-.main>.input_area>.password{
+.main>.register_area>.password{
     border-top: 0px;
     border-bottom: 0px;
+}
+
+.main>.login_area>.password{
+    border-top: 0px;
 }
 
 
