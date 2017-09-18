@@ -74,42 +74,56 @@ for(var i=0;i<touch.length;i++){
             s('getTask').style.display='block';
 
             s('selected').style.display='block';
+            var toolLeft=0;
+            var toolTop=0;
             switch(g){
                 case 0:
-                    s('selected').style.left='944px';
-                    s('selected').style.top='277px';
-                    s('getTask').style.left='984px';
-                    s('getTask').style.top='317px';
+                    s('selected').style.left='890px';
+                    s('selected').style.top='300px';
+                    s('getTask').style.left='930px';
+                    toolLeft='930px';
+                    s('getTask').style.top='340px';
+                    toolTop='340px';
                     break;
                 case 1:
                     s('selected').style.left='1036px';
                     s('selected').style.top='156px';
                     s('getTask').style.left='775px';
+                    toolLeft='775px';
                     s('getTask').style.top='196px';
+                    toolTop='196px';
                     break;
                 case 2:
                     s('selected').style.left='239px';
                     s('selected').style.top='302px';
                     s('getTask').style.left='279px';
+                    toolLeft='279px';
                     s('getTask').style.top='342px';
+                    toolTop='342px';
                     break;
                 case 3:
                     s('selected').style.left='490px';
                     s('selected').style.top='405px';
                     s('getTask').style.left='525px';
+                    toolLeft='525px';
                     s('getTask').style.top='135px';
+                    toolTop='135px';
                     break;
                 case 4:
                     s('selected').style.left='664px';
                     s('selected').style.top='400px';
                     s('getTask').style.left='704px';
+                    toolLeft='704px';
                     s('getTask').style.top='127px';
+                    toolTop='127px';
                     break;
                 case 5:
                     s('getTask').style.left=e.clientX+'px';
                     s('getTask').style.top=e.clientY+'px';
                     s('selected').style.left=e.clientX-40+'px';
                     s('selected').style.top=e.clientY-40+'px';
+                    toolLeft=e.clientX-40+'px';
+                    toolTop=e.clientY-40+'px';
                     break;
             }
 
@@ -129,14 +143,17 @@ for(var i=0;i<touch.length;i++){
                         console.log(g);
                         taskName=manage[g].parentNode.parentNode.children[1].children[0].innerText;
                         taskTime=manage[g].parentNode.parentNode.children[1].children[1].innerText;
-                        console.log(taskName+'  '+taskTime);
+
                         a=manage[g];
                         manage[g].src="img/manage_fill.png";
                         manage[(g+1)%3].src="img/manage.png";
                         manage[(g+2)%3].src="img/manage.png";
+                        console.log(toolTop);
+                        console.log(toolLeft);
                         s('tools').style.display='flex';
-                        s('tools').style.top=e.clientY+65+60*g+'px'
-                        s('tools').style.left=e.clientX+335+'px'
+                        s('tools').style.top=parseFloat(toolTop)+65+60*g+'px'
+                        s('tools').style.left=parseFloat(toolLeft)+335+'px'
+                        console.log(1);
                     }
 
 

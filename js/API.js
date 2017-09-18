@@ -1,4 +1,4 @@
-var prefix='http://120.24.70.191:8080/VisualNoteBook';
+var prefix='http://121.250.222.46:8081';
 var API={
     login:`${prefix}/api/all/login`,
     unlogin:`${prefix}/api/all/unlogin`,
