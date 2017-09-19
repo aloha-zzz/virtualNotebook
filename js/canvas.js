@@ -19,7 +19,7 @@ workPic.stroke();
 workPic.fill();
 workPic.font='30px Courier New bolder';
 workPic.fillStyle='#000';
-workPic.fillText("工作",42,82);
+workPic.fillText("学习",42,82);
 
 var recordPic=record.getContext('2d');
 recordPic.strokeStyle='#ffffff';
@@ -51,4 +51,4 @@ studyPic.stroke();
 studyPic.fill();
 studyPic.font='30px Courier New bolder';
 studyPic.fillStyle='#000';
-studyPic.fillText("学习",190,90);
+studyPic.fillText("生活",190,90);

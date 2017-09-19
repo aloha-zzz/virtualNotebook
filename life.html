@@ -147,8 +147,8 @@
             <div>删除</div>
         </div>
     </div>
-    <img class="left" src="img/work/left.png">
-    <img class="right" src="img/work/right.png">
+    <img class="left" onclick="lefthref()" src="img/work/left.png">
+    <img class="right" onclick="righthref()" src="img/work/right.png">
     <img class="selected" id="selected" src="img/life/selected.png">
 </body>
     <script src="js/jquery-3.2.0.min.js"></script>
@@ -158,5 +158,12 @@
     <script src="js/life.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/common.js"></script>
-
+    <script>
+        function lefthref() {
+            window.location.href='work.html';
+        }
+        function righthref() {
+            window.location.href='index.html';
+        }
+    </script>
 </html>

@@ -4,25 +4,53 @@
     <meta charset="UTF-8">
     <title>virtualNotebook</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 <body>
    <div class="top">
        <div><img class="topimg1" src="img/notebook.png"></div>
-       <div><img class="topimg2" style="cursor: pointer;" src="img/login.png" onclick="href()"></div>
+       <div><img class="topimg2" id="img" style="cursor: pointer;" src="img/login.png" onclick="href()"></div>
    </div>
     <div class="main">
         <canvas id="record"></canvas>
-        <canvas id="work"></canvas>
-        <canvas id="study"></canvas>
-        <div class="bookDiv"><img class="book" src="img/mainbook.png">
-        <img class="create" src="img/create.png" onclick="href()">
+        <canvas id="work" style="cursor: pointer"  onclick="workhref()"></canvas>
+        <canvas id="study" class=""  onclick="studyhref()"></canvas>
+        <div class="bookDiv"><img class="book"  src="img/mainbook.png">
+        <!--<img class="create" src="img/create.png" onclick="href()">-->
         </div>
     </div>
 </body>
+<script src="js/jquery-3.2.0.min.js"></script>
+<script src='js/jquery.cookie.js'></script>
 <script>
+
     function href() {
         window.location.href='login.html';
     }
+    function workhref() {
+        window.location.href='work.html';
+    }
+    function studyhref() {
+        window.location.href='life.html';
+    }
+    document.getElementById('work').onmouseover=function () {
+        document.getElementById('work').className='animated pulse infinite';
+    }
+    document.getElementById('work').onmouseout=function () {
+        document.getElementById('work').className='';
+    }
+    document.getElementById('study').onmouseover=function () {
+        document.getElementById('study').className='animated pulse infinite';
+    }
+    document.getElementById('study').onmouseout=function () {
+        document.getElementById('study').className='';
+    }
+    if($.cookie('username')==undefined){
+         document.getElementById('img').style.display='block';
+    }else{
+        document.getElementById('img').style.display='none';
+    }
+
 </script>
 <script src="js/canvas.js"></script>
 </html>

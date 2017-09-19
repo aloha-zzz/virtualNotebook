@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>work</title>
-    <link rel="stylesheet" href="./CSS/work.css">
+    <link rel="stylesheet" href="css/work.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
+    <div class="top">
+         <div><img class="topimg1" src="img/notebook.png"></div>
+    </div>
     <div class="main">
-        <div class="left">
-            <div class="bookCase"><img src="./img/work/bookCase.png" alt="书架图片"></div>
+        <div class="workLeft">
+            <div class="bookCase"><img src="./img/work/bookCase.png" alt="书架图片"></div>`
             <div class="book"><img src="./img/work/book1_a.png" alt="书"></div>
             <div class="flowerPot"><img src="./img/work/plant1.png" alt="植物"></div></div>
         <div class="mid">
@@ -16,7 +20,7 @@
             <div class="computer"><img src="./img/work/computer1.png" alt="电脑"></div>
             <div class="table"><img src="./img/work/table.png" alt="桌子"></div>
         </div>
-        <div class="right">
+        <div class="workRight">
             <div class="support"><img src="./img/work/bookCase.png" alt="书架图片"></div>
             <div class="clock"><img src="./img/work/clock.png" alt="时钟"></div>
             <div class="chair"><img src="./img/work/chair.png" alt="椅子">
@@ -24,5 +28,16 @@
             </div>
         </div>
     </div>
+    <img class="left" onclick="lefthref()" src="img/work/left.png">
+    <img class="right" onclick="righthref()" src="img/work/right.png">
+    <script src="js/API.js"></script>
+    <script>
+        function lefthref() {
+            window.location.href='index.html';
+        }
+        function righthref() {
+            window.location.href='life.html';
+        }
+    </script>
 </body>
 </html>

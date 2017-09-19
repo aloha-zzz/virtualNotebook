@@ -4,8 +4,12 @@ html{
     margin: 0px;
     padding: 0px;
     font-size: 62.5%;
-    background:url(../img/work/bgc.png)no-repeat;
+    background:url(../img/work/bgc.png) no-repeat;
     background-size:100% 100%;
+}
+*{
+    margin: 0;
+    padding:0;
 }
 .main{
     width: 90%;
@@ -17,12 +21,12 @@ html{
     /*background-size:100% 100%;*/
     /*background-color: gray;*/
 }
-.left{
+.workLeft{
     margin-top: 8%;
     width: 30%;
     position: relative;
 }
-.left img{
+.workLeft img{
     width: 100%;
 }
 .bookCase{
@@ -73,12 +77,12 @@ html{
 }
 
 
-.right{
+.workRight{
     margin-top: 8%;
     width: 30%;
     position: relative;
 }
-.right img{
+.workRight img{
     width: 100%;
 }
 .clock{
@@ -101,7 +105,20 @@ html{
     left: 35%;
     top: 40%;
 }
-.right>.support{
+.workRight>.support{
     width: 100%;
     opacity: 0;
+}
+.topimg1{
+    width: 150px;
+    height: 60px;
+}
+.top{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    min-height: 60px;
+    height: 5%;
+    background-color: #2A2A2A;
+    opacity: 0.7;
 }
