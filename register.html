@@ -14,7 +14,7 @@
         <div class="my_notebook"><img src="./img/login/my_notebook.png" class="pic"></div>
         <div class="login_register">
             <div class="register">注册</div>
-            <div class="login">登录</div>
+            <div class="login" onclick="href()">登录</div>
         </div>
         <div class="input_area register_area">
             <input class="account" type="text" placeholder="请输入账号">
@@ -30,4 +30,9 @@
 <script src="js/API.js"></script>
 <script src="js/Ajaxfunction.js"></script>
 <script src="js/login.js"></script>
+<script>
+    function href() {
+        window.location.href='login.html';
+    }
+</script>
 </html>

@@ -10,6 +10,7 @@ document.getElementById('register').onclick=function () {
             console.log(data);
             if(data.status==200){
                 console.log('注册成功');
+                window.location.href='login.html';
             }else  if(data.status==300){
                 console.log('该用户名已存在');
             }
