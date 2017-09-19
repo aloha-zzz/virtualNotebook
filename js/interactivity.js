@@ -11,30 +11,37 @@ s('submit').onclick=function () {
         var user =new AjaxFunction();
         user.addTask(name,time,taskType,function (data) {
             console.log(data);
-            alert('添加事项成功')
+            alert('添加事项成功');
+            document.querySelector('body').click();
+
+            s('closeAddTask').click();
         },function (data) {
             console.log(data);
-
         })
     }
+
 
 }
 function finish(e) {
     taskId=e.parentNode.parentNode.getAttribute('taskId');
+    e.parentNode.parentNode.lastChild.previousSibling.innerHTML='';
     e.parentNode.innerHTML=`<img src='img/finish.png'>`;
     var user =new AjaxFunction();
-    // user.finishTask(taskId,function (data) {
-    //     console.log(data);
-    //     alert('您成功完成该任务')
-    // },function (data) {
-    //     alert('网络连接超时')
-    // })
+    user.finishTask(taskId,function (data) {
+        console.log(data);
+        alert('您成功完成该任务');
+    },function (data) {
+        alert('网络连接超时')
+    })
 }
 
 
 s('closeAddTask').onclick=function () {
     s('addTask').style.display="none";
     s('outer').style.display='none';
+    document.querySelectorAll('.addTask input')[0].value='';
+    document.querySelectorAll('.addTask input')[1].value='';
+
 }
 
 s('getTask').onclick=function (e) {
@@ -71,6 +78,7 @@ s('editBtn').onclick=function () {
     inputValue=taskTime.replace(/\//g,'-');
     document.querySelectorAll('.editTask input')[1].value=inputValue.replace(' ','T');
 
+
 }
 s('edit').onclick=function () {
 
@@ -80,10 +88,12 @@ s('edit').onclick=function () {
         var user =new AjaxFunction();
         var input1=document.querySelectorAll('.editTask input')[0].value;
         var input2=document.querySelectorAll('.editTask input')[1].value;
-        console.log(2222)
+
         user.updateTask(taskId,input1,input2,taskType,function (data) {
             console.log(data);
-            alert('修改成功');
+            alert('修改成功')
+            document.querySelector('body').click();
+            s('closeEditTask').click();
         },function (data) {
             console.log(data);
             alert('网络连接超时')
@@ -236,7 +246,19 @@ for(var i=0;i<touch.length;i++){
                         })(i)
                     }
                 }else if(data.status==300){
-                    alert('no info');
+
+                    s('getTask').innerHTML=` <div>
+            <img style="flex: 1" width="40" height="40" src="img/remind.png">
+            <div style="flex: 6">提醒事项</div>
+        </div>`+`<div class="taskLine">还没有信息</div>`+
+                        `<div>
+            <div>现有事项:0</div>
+            <button id="add">添加</button>
+        </div>`;
+                    s('add').onclick=function () {
+                        s('outer').style.display='block';
+                        s('addTask').style.display="block";
+                    }
                 }
             },function (data) {
                 console.log(data);
@@ -259,7 +281,7 @@ for(var i=0;i<touch.length;i++){
                         s('tools').style.display='flex';
                         s('tools').style.top=parseFloat(toolTop)+65+60*g+'px'
                         s('tools').style.left=parseFloat(toolLeft)+335+'px'
-                        console.log(1);
+
                     }
 
 
@@ -283,10 +305,14 @@ s('delete').onclick=function (e) {
     s('outer').style.display='none';
     var user=new AjaxFunction();
     user.deleteTask(taskId,function (data) {
+
+        document.getElementsByTagName('body')[0].click();
+        s('closeDeleteDiv').click();
         alert('删除成功');
     },function (data) {
         alert('网络链接超时')
     })
+
 }
 s('deleteDiv').onclick=function (e) {
     e.cancelBubble=true;
