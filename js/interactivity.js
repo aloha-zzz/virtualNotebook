@@ -181,7 +181,7 @@ for(var i=0;i<touch.length;i++){
                 console.log(data);
                 if(data.status==200){
                     var content=''
-                    for(var i=0;i<data.data.total;i++){
+                    for(var i=0;i<data.data.tasks.length;i++){
                         content+=`
             <div class="taskLine" taskId="${data.data.tasks[i].taskId}">
                 <div>
