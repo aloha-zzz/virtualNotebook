@@ -54,12 +54,12 @@ function AjaxFunction() {
         }
     }
 
-    ajaxFunction.prototype.getTask=function (page,rows,success,failed) {
+    ajaxFunction.prototype.getTask=function (page,rows,taskType,success,failed) {
         if(typeof success==='function'&&typeof failed==='function'){
             $.ajax({
                 url:API.getTask,
                 type:'get',
-                data:{page,rows},
+                data:{page,rows,taskType},
                 dataType:'json',
                 success:function(data){
                     success(data);
@@ -71,12 +71,12 @@ function AjaxFunction() {
         }
     }
 
-    ajaxFunction.prototype.addTask=function (taskName,taskTime,success,failed) {
+    ajaxFunction.prototype.addTask=function (taskName,taskTime,taskType,success,failed) {
         if(typeof success==='function'&&typeof failed==='function'){
             $.ajax({
                 url:API.addTask,
                 type:'post',
-                data:{taskName,taskTime},
+                data:{taskName,taskTime,taskType},
                 dataType:'json',
                 success:function(data){
                     success(data);
@@ -88,12 +88,12 @@ function AjaxFunction() {
         }
     }
 //修改任务
-    ajaxFunction.prototype.updateTask=function (taskId,taskName,taskTime,success,failed) {
+    ajaxFunction.prototype.updateTask=function (taskId,taskName,taskTime,taskType,success,failed) {
         if(typeof success==='function'&&typeof failed==='function'){
             $.ajax({
                 url:API.updateTask,
                 type:'post',
-                data:{taskId,taskName,taskTime},
+                data:{taskId,taskName,taskTime,taskType},
                 dataType:'json',
                 success:function(data){
                     success(data);
