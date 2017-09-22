@@ -134,7 +134,7 @@ for(var i=0;i<touch.length;i++){
                     toolLeft='930px';
                     s('getTask').style.top='340px';
                     toolTop='340px';
-                    taskType='plant';
+                    taskType='workBook';
                     break;
                 case 1:
                     s('selected').style.left='1036px';
@@ -143,7 +143,7 @@ for(var i=0;i<touch.length;i++){
                     toolLeft='775px';
                     s('getTask').style.top='196px';
                     toolTop='196px';
-                    taskType='window';
+                    taskType='workPlant';
                     break;
                 case 2:
                     s('selected').style.left='239px';
@@ -152,7 +152,7 @@ for(var i=0;i<touch.length;i++){
                     toolLeft='279px';
                     s('getTask').style.top='342px';
                     toolTop='342px';
-                    taskType='water';
+                    taskType='computer';
                     break;
                 case 3:
                     s('selected').style.left='490px';
@@ -161,26 +161,9 @@ for(var i=0;i<touch.length;i++){
                     toolLeft='525px';
                     s('getTask').style.top='135px';
                     toolTop='135px';
-                    taskType='bed';
+                    taskType='bag';
                     break;
-                case 4:
-                    s('selected').style.left='664px';
-                    s('selected').style.top='400px';
-                    s('getTask').style.left='704px';
-                    toolLeft='704px';
-                    s('getTask').style.top='127px';
-                    toolTop='127px';
-                    taskType='charge';
-                    break;
-                case 5:
-                    s('getTask').style.left=e.clientX+'px';
-                    s('getTask').style.top=e.clientY+'px';
-                    s('selected').style.left=e.clientX-40+'px';
-                    s('selected').style.top=e.clientY-40+'px';
-                    toolLeft=e.clientX+'px';
-                    toolTop=e.clientY+'px';
-                    taskType='book';
-                    break;
+
             }
 
             var user=new AjaxFunction();

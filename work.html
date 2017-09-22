@@ -7,30 +7,157 @@
     <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
+<div id="outer"></div>
     <div class="top">
          <div><img class="topimg1" src="img/notebook.png"></div>
     </div>
     <div class="main">
         <div class="workLeft">
             <div class="bookCase"><img src="./img/work/bookCase.png" alt="书架图片"></div>`
-            <div class="book"><img src="./img/work/book1_a.png" alt="书"></div>
-            <div class="flowerPot"><img src="./img/work/plant1.png" alt="植物"></div></div>
+            <div class="book touch"><img src="./img/work/book1_a.png" alt="书"></div>
+            <div class="flowerPot touch"><img src="./img/work/plant1.png" alt="植物"></div></div>
         <div class="mid">
             <div class="support"><img src="./img/work/bookCase.png" alt="书架图片"></div>
-            <div class="computer"><img src="./img/work/computer1.png" alt="电脑"></div>
+            <div class="computer touch"><img src="./img/work/computer1.png" alt="电脑"></div>
             <div class="table"><img src="./img/work/table.png" alt="桌子"></div>
         </div>
         <div class="workRight">
             <div class="support"><img src="./img/work/bookCase.png" alt="书架图片"></div>
             <div class="clock"><img src="./img/work/clock.png" alt="时钟"></div>
             <div class="chair"><img src="./img/work/chair.png" alt="椅子">
-                <div class="breifCase"><img src="./img/work/breifCase1.png" alt="公文包"></div>
+                <div class="breifCase touch"><img src="./img/work/breifCase1.png" alt="公文包"></div>
             </div>
         </div>
     </div>
+
+
+    <div class="addTask" id="addTask">
+
+        <div>写下您将要添加的事项</div>
+        <div>
+            <div>事项名称:</div>
+            <div><input  type="text"></div>
+        </div>
+        <div>
+            <div>事项时间:</div>
+            <div>
+                <input type="datetime-local"/>
+            </div>
+
+        </div>
+        <div>
+            <button id="submit">提交</button>
+        </div>
+        <div id="closeAddTask">&times;</div>
+    </div>
+
+    <div class="editTask" id="editTask">
+
+        <div>编辑您要修改的事项</div>
+        <div>
+            <div>事项名称:</div>
+            <div><input  type="text"></div>
+        </div>
+        <div>
+            <div>事项时间:</div>
+            <div>
+                <input type="datetime-local"/>
+            </div>
+
+        </div>
+        <div>
+            <button id="edit">提交</button>
+        </div>
+        <div id="closeEditTask">&times;</div>
+    </div>
+
+    <div class="getTask" id="getTask">
+
+        <!--<div>-->
+        <!--<img style="flex: 1" width="40" height="40" src="img/remind.png">-->
+        <!--<div style="flex: 6">提醒事项</div>-->
+        <!--</div>-->
+
+        <!--<div class="taskLine">-->
+        <!--<div>-->
+        <!--<div class="circle"></div>-->
+
+        <!--</div>-->
+        <!--<div>-->
+        <!--<div>运动会开幕式致辞</div>-->
+        <!--<div class="time">2017/07/14 15:00</div>-->
+        <!--</div>-->
+        <!--<div>-->
+        <!--<img class="manage" src='img/manage.png'>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="taskLine">-->
+        <!--<div>-->
+        <!--<div class="circle"></div>-->
+        <!--</div>-->
+        <!--<div>-->
+        <!--<div>运动会开幕式致辞</div>-->
+        <!--<div class="time">2017/07/14 15:00</div>-->
+        <!--</div>-->
+        <!--<div>-->
+        <!--<img class="manage" src='img/manage.png'>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div class="taskLine">-->
+        <!--<div>-->
+        <!--<div class="circle"></div>-->
+        <!--</div>-->
+        <!--<div>-->
+        <!--<div>运动会开幕式致辞</div>-->
+        <!--<div class="time">2017/07/14 15:00</div>-->
+        <!--</div>-->
+        <!--<div>-->
+        <!--<img class="manage" src='img/manage.png'>-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--<div>-->
+        <!--<div>现有事项:6</div>-->
+        <!--<button id="add">添加</button>-->
+        <!--</div>-->
+
+    </div>
+
+    <div class="deleteDiv" id="deleteDiv">
+        <div>
+            <img src="img/prompt.png">
+            <div>提示</div>
+        </div>
+        <div>
+            是否确认删除该事项?
+        </div>
+        <div>
+            <button id="delete">删除</button>
+        </div>
+
+        <div id="closeDeleteDiv">&times;</div>
+    </div>
+    <div class='tools' id="tools">
+        <div>
+            <img id="editBtn" src="img/edit.png">
+            <div>编辑</div>
+        </div>
+        <div>
+
+            <img id="deleteBtn" src="img/delete.png">
+            <div>删除</div>
+        </div>
+    </div>
+
     <img class="left" onclick="lefthref()" src="img/work/left.png">
     <img class="right" onclick="righthref()" src="img/work/right.png">
+    <img class="selected" id="selected" src="img/life/selected.png">
+    <script src="js/jquery-3.2.0.min.js"></script>
     <script src="js/API.js"></script>
+    <script src="js/Ajaxfunction.js"></script>
+    <script src="js/workIntera.js"></script>
+    <script src="js/life.js"></script>
+    <!-- <script src="js/clock.js"></script> -->
     <script>
         function lefthref() {
             window.location.href='index.html';
