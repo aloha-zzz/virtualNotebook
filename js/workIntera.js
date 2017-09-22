@@ -128,38 +128,38 @@ for(var i=0;i<touch.length;i++){
 
             switch(g){
                 case 0:
-                    s('selected').style.left='890px';
-                    s('selected').style.top='300px';
-                    s('getTask').style.left='930px';
+                    s('selected').style.left='1%';
+                    s('selected').style.top='13%';
+                    s('getTask').style.left='5%';
                     toolLeft='930px';
-                    s('getTask').style.top='340px';
+                    s('getTask').style.top='19%';
                     toolTop='340px';
                     taskType='workBook';
                     break;
                 case 1:
-                    s('selected').style.left='1036px';
-                    s('selected').style.top='156px';
-                    s('getTask').style.left='775px';
+                    s('selected').style.left='29%';
+                    s('selected').style.top='10%';
+                    s('getTask').style.left='33%';
                     toolLeft='775px';
-                    s('getTask').style.top='196px';
+                    s('getTask').style.top='16%';
                     toolTop='196px';
                     taskType='workPlant';
                     break;
                 case 2:
-                    s('selected').style.left='239px';
-                    s('selected').style.top='302px';
-                    s('getTask').style.left='279px';
+                    s('selected').style.left='49%';
+                    s('selected').style.top='8%';
+                    s('getTask').style.left='53%';
                     toolLeft='279px';
-                    s('getTask').style.top='342px';
+                    s('getTask').style.top='14%';
                     toolTop='342px';
                     taskType='computer';
                     break;
                 case 3:
-                    s('selected').style.left='490px';
-                    s('selected').style.top='405px';
-                    s('getTask').style.left='525px';
+                    s('selected').style.left='59%';
+                    s('selected').style.top='8%';
+                    s('getTask').style.left='63%';
                     toolLeft='525px';
-                    s('getTask').style.top='135px';
+                    s('getTask').style.top='14%';
                     toolTop='135px';
                     taskType='bag';
                     break;
